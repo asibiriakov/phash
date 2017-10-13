@@ -31,7 +31,7 @@ def clear_buffer(connection):
 
 connection = paramiko.SSHClient()
 connection.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-connection.connect('10.10.10.100', username='admin', password='admin', look_for_keys=False, allow_agent=False)
+connection.connect('10.10.10.100', username = 'admin', password = 'admin', look_for_keys = False, allow_agent = False)
 new_connection = connection.invoke_shell()
 output = clear_buffer(new_connection)
 time.sleep(2)
@@ -51,7 +51,7 @@ with open('phash_results.txt', 'w') as f:
                 counter = counter.group(0)
                 for server in servers:
                         if counter.rstrip() == server:
-                                servers[server] +=1
+                                servers[server] += 1
 
         for server in servers:
                 f.write('Server id' + str(server) + ' has ' + str( servers[server]) + ' addresses associated\n')
