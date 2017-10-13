@@ -54,6 +54,6 @@ with open('phash_results.txt', 'w') as f:
                                 servers[server] +=1
 
         for server in servers:
-                f.write('Server id' + str(server) + ' has ' + str( servers[server]) + ' addresses assotiated\n')
+                f.write('Server id' + str(server) + ' has ' + str( servers[server]) + ' addresses associated\n')
         print('Completed!')
 new_connection.close()
