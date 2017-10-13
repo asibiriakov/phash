@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import paramiko, time, getpass, json, re
+import paramiko, getpass, json, re
 
 with open('addresses.txt', 'r') as f:
     ips = [line for line in f.readlines()]
