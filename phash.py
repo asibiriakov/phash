@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #Import modules
-import paramiko, getpass, json, re
+import paramiko, getpass, json, re, time
 #Open a file with a list of addresses to check against phash
 with open('addresses.txt', 'r') as f:
     ips = [line for line in f.readlines()]
